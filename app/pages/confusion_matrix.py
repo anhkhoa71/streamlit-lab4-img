@@ -95,8 +95,10 @@ st.markdown('<p class="subtitle">Detailed Classification Performance for Each Mo
 # Divider
 st.markdown('<div class="section-divider"></div>', unsafe_allow_html=True)
 
-# ============ DIRECTORY CONFIG ============
-confusion_dir = r"assets/confusion_matrix"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Thư mục confusion matrix tuyệt đối
+confusion_dir = os.path.join(BASE_DIR, "assets", "confusion_matrix")
 
 # Định nghĩa các models
 models_config = [
