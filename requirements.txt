@@ -1,12 +1,10 @@
 # Streamlit
 streamlit>=1.30.0,<2.0
 
-# PyTorch CPU-only
-torch==2.2.1+cpu
-torchvision==0.17.1+cpu
-torchaudio==2.2.1+cpu
--f https://download.pytorch.org/whl/torch_stable.html
-
+# PyTorch (CPU-only từ PyPI mặc định)
+torch==2.8.0
+torchvision==0.23.0
+torchaudio==2.8.0
 # Core libs
 numpy>=1.24.0,<2.4
 pandas>=2.1.0,<2.4
