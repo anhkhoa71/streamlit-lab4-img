@@ -73,19 +73,19 @@ class ImageDataset(Dataset):
         return img_transformed, label
 
 
-valid_ratio = 0.2
-data_path = '../data'
+# valid_ratio = 0.2
+# data_path = '../data'
 
-if not os.path.exists(os.path.join(data_path, 'val')):
-    train_valid_split(data_path, valid_ratio)
+# if not os.path.exists(os.path.join(data_path, 'val')):
+#     train_valid_split(data_path, valid_ratio)
 
-phases = ['train', 'val', 'test']
-dataset_dict = {phase: ImageDataset(root=data_path, transform=ImageTranforms(), phase=phase)
-                for phase in phases}
+# phases = ['train', 'val', 'test']
+# dataset_dict = {phase: ImageDataset(root=data_path, transform=ImageTranforms(), phase=phase)
+#                 for phase in phases}
 
-loader_dict = {phase: DataLoader(
-                    dataset_dict[phase],
-                    batch_size=16,
-                    shuffle=(phase == 'train'),
-                    num_workers=0
-                ) for phase in phases}
+# loader_dict = {phase: DataLoader(
+#                     dataset_dict[phase],
+#                     batch_size=16,
+#                     shuffle=(phase == 'train'),
+#                     num_workers=0
+#                 ) for phase in phases}
