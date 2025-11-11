@@ -330,7 +330,7 @@ with st.sidebar:
 
 # ----- Inference Settings -----
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-MODEL_PATH = os.path.join(ROOT, "models")
+MODEL_PATH = os.path.join(ROOT, "..", "models")
 MODEL_PATH = os.path.abspath(MODEL_PATH)
 LABELS = ["building", "forest", "glacier", "mountain", "sea", "street"]
 
@@ -339,7 +339,7 @@ with st.spinner("Loading models, please wait..."):
 st.success("Models loaded successfully!")
 
 
-# ----- Main Content -----
+# ----- Main Content ----- 
 if uploaded_file is not None:
     try:
         # Load and display image
