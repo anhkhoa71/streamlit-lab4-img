@@ -6,8 +6,9 @@ from time import sleep
 from src.utils.inference import load_model_dict, inference_model_dict
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
 if ROOT not in sys.path:
-    sys.path.append(ROOT)
+    sys.path.insert(0, ROOT) 
 
 
 @st.cache_resource
