@@ -5,6 +5,7 @@
 data/
 outputs/
 checkpoints/
+models/
 /Paper
 .venv
 .github
