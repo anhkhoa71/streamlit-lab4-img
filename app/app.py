@@ -5,7 +5,7 @@ import torch
 from time import sleep
 from src.utils.inference import load_model_dict, inference_model_dict
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__)))
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if ROOT not in sys.path:
     sys.path.append(ROOT)
 
@@ -330,7 +330,7 @@ with st.sidebar:
 
 # ----- Inference Settings -----
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-MODEL_PATH = os.path.join(ROOT, "..", "models")
+MODEL_PATH = os.path.join(ROOT, "models")
 MODEL_PATH = os.path.abspath(MODEL_PATH)
 LABELS = ["building", "forest", "glacier", "mountain", "sea", "street"]
 
