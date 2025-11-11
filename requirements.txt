@@ -1,23 +1,26 @@
 # Streamlit
 streamlit>=1.30.0,<2.0
 
-# PyTorch CPU version
-torch==2.1.2
-torchvision==0.17.1
-torchaudio==2.2.1
+# PyTorch CPU-only
+torch==2.2.1+cpu
+torchvision==0.17.1+cpu
+torchaudio==2.2.1+cpu
+-f https://download.pytorch.org/whl/torch_stable.html
 
 # Core libs
-numpy==1.25.2
-pandas==2.1.4
-scikit-learn==1.3.2
+numpy>=1.24.0,<2.4
+pandas>=2.1.0,<2.4
+matplotlib>=3.8.0,<3.11
+scikit-learn>=1.3.0,<1.8
+joblib>=1.3.0,<1.6
+tqdm>=4.67.0
+pillow>=10.1.0
 
-# Visualization
-matplotlib==3.8.1
-seaborn==0.12.2
+# GIS libs
+geopandas>=1.0.0,<1.2.0
+shapely>=2.0.0,<3.0.0
+pyproj>=3.6.0,<4.0.0
 
-# Utilities
-tqdm==4.66.1
-pillow==10.1.0
-
-# Model hub
+# Utils
+requests>=2.32.0
 huggingface_hub

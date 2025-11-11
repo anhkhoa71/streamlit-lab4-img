@@ -1,7 +1,7 @@
 import streamlit as st
 import sys, os
 from PIL import Image
-# import torch
+import torch
 from time import sleep
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -329,8 +329,7 @@ with st.sidebar:
     """)
 
 # ----- Inference Settings -----
-# DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-DEVICE = "cpu"
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MODEL_PATH = os.path.join(ROOT, "models")  # absolute path
 LABELS = ["building", "forest", "glacier", "mountain", "sea", "street"]
 
