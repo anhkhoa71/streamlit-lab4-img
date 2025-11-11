@@ -98,7 +98,7 @@ st.markdown('<div class="section-divider"></div>', unsafe_allow_html=True)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Thư mục chứa ảnh metrics
-metrics_dir = os.path.join(BASE_DIR, "assets", "metrics")
+metrics_dir = os.path.join(BASE_DIR, "..", "assets", "metrics")
 
 # Định nghĩa metrics với icon và màu sắc
 metrics_config = [

@@ -98,7 +98,7 @@ st.markdown('<div class="section-divider"></div>', unsafe_allow_html=True)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Thư mục confusion matrix tuyệt đối
-confusion_dir = os.path.join(BASE_DIR, "assets", "confusion_matrix")
+confusion_dir = os.path.join(BASE_DIR, "..", "assets", "confusion_matrix")
 
 # Định nghĩa các models
 models_config = [
