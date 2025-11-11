@@ -1,10 +1,10 @@
 # Streamlit
 streamlit>=1.30.0,<2.0
 
-# PyTorch
-torch
-torchvision==0.23.0
-torchaudio==2.8.0
+# PyTorch CPU version
+torch==2.2.1
+torchvision==0.17.1
+torchaudio==2.2.1
 
 # Core libs
 numpy==1.25.2
@@ -19,5 +19,5 @@ seaborn==0.12.2
 tqdm==4.66.1
 pillow==10.1.0
 
-# Model
+# Model hub
 huggingface_hub
