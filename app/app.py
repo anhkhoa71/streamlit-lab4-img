@@ -4,7 +4,7 @@ from PIL import Image
 import torch
 from time import sleep
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 if ROOT not in sys.path:
     sys.path.append(ROOT)
 
@@ -330,7 +330,7 @@ with st.sidebar:
 
 # ----- Inference Settings -----
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-MODEL_PATH = os.path.join(ROOT, "models")  # absolute path
+MODEL_PATH = os.path.join(ROOT, "models") 
 LABELS = ["building", "forest", "glacier", "mountain", "sea", "street"]
 
 with st.spinner("Loading models, please wait..."):
