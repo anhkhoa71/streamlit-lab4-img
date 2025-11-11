@@ -330,7 +330,7 @@ with st.sidebar:
 
 # ----- Inference Settings -----
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-MODEL_PATH = r"anhkhoa71/model_lab04_cs406"
+MODEL_PATH = os.path.join(ROOT, "models")  # absolute path
 LABELS = ["building", "forest", "glacier", "mountain", "sea", "street"]
 
 with st.spinner("Loading models, please wait..."):

@@ -1,5 +1,4 @@
 import torch
-from huggingface_hub import hf_hub_download
 from src.utils.dataset import ImageTranforms
 from src.models.convnextv1 import ConvNeXt
 from src.models.vit import VisionTransformer
@@ -38,8 +37,8 @@ def inference(model, img, labels, device):
         pred_label = labels[pred_idx]
         pred_acc = probs[pred_idx].item() * 100
         return pred_label, pred_acc, elapsed_time
-
-def load_model_dict(path_or_repo, device, from_hf=True):
+    
+def load_model_dict(path, device):
     model_dict = {
         'VGG19': VGG19Net(num_classes=6),
         'ResNet34': ResNet34(num_classes=6),
@@ -56,28 +55,12 @@ def load_model_dict(path_or_repo, device, from_hf=True):
     }
     
     loaded_models = {}
-    
     for model_name, model in model_dict.items():
-        filename = f"{model_name.lower()}.pth"
-        
-        if from_hf:
-            model_path = hf_hub_download(repo_id=path_or_repo, filename=filename)
-        else:
-            model_path = os.path.join(path_or_repo, filename)
-        
-        if not os.path.exists(model_path):
-            print(f"⚠️ Warning: {model_path} not found, skipping {model_name}.")
-            continue
-        
-        state_dict = torch.load(model_path, map_location=device)
-        model.load_state_dict(state_dict)
-        model.to(device)
-        model.eval()
-        
-        loaded_models[model_name] = model
+        model_name_lower = model_name.lower()
+        model_path = os.path.join(path, f'{model_name_lower}.pth')
+        loaded_models[model_name] = load_model(model, model_path, device)
     
-    return loaded_models
-
+    return loaded_models 
 
 def inference_model_dict(model_dict, img, labels, device):
     results = {}
