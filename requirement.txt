@@ -1,8 +1,8 @@
 # Streamlit
 streamlit>=1.30.0,<2.0
 
-# PyTorch (CPU-only từ PyPI mặc định)
-torch==2.8.0
+# PyTorch
+torch
 torchvision==0.23.0
 torchaudio==2.8.0
 
