@@ -140,6 +140,7 @@ for idx, metric in enumerate(metrics_config):
             st.markdown(f"""
             <div class="custom-warning">
                 <strong>⚠️ Warning:</strong> Metric image not found: {metric['title']}
+                <strong>⚠️ Warning:</strong> {img_path}
             </div>
             """, unsafe_allow_html=True)
 

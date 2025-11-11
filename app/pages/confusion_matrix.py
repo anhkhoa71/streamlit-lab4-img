@@ -139,6 +139,7 @@ for idx, model in enumerate(models_config):
             st.markdown(f"""
             <div class="custom-warning">
                 <strong>Warning:</strong> Confusion matrix not found for model: {model['name']}
+                <strong>Warning:</strong> {img_path}
             </div>
             """, unsafe_allow_html=True)
 
