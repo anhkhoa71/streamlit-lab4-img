@@ -332,7 +332,7 @@ with st.sidebar:
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MODEL_PATH = os.path.join(ROOT, "..", "models")
 MODEL_PATH = os.path.abspath(MODEL_PATH)
-print(MODEL_PATH)
+print("MODEL_PATH =", MODEL_PATH)
 LABELS = ["building", "forest", "glacier", "mountain", "sea", "street"]
 
 with st.spinner("Loading models, please wait..."):
