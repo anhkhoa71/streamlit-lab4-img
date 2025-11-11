@@ -1,6 +1,10 @@
-# PyTorch
-torch==2.2.1
-torchvision==0.17.1
+# Streamlit
+streamlit>=1.30.0,<2.0
+
+# PyTorch (CPU-only từ PyPI mặc định)
+torch==2.8.0
+torchvision==0.23.0
+torchaudio==2.8.0
 
 # Core libs
 numpy==1.25.2
