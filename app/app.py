@@ -4,11 +4,9 @@ from PIL import Image
 import torch
 from time import sleep
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-print(ROOT)
-from src.utils.inference import load_model_dict, inference_model_dict
-
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT) 
+from src.utils.inference import load_model_dict, inference_model_dict
 
 
 @st.cache_resource
